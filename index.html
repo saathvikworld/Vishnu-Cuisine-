@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Vishnu Campus Cuisine</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Vishnu Campus Cuisine</h1>
+      <nav>
+        <a href="#tiffins">Tiffins</a>
+        <a href="#lunch">Lunch</a>
+        <a href="#dinner">Dinner</a>
+        <a href="#juice">Juice</a>
+        <a href="#tandoor">Tandoor</a>
+        <a href="#payment">Order & Pay</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="container">
+      <h2>Homestyle Food on Vishnu Campus</h2>
+      <p>Tiffins • Lunch • Dinner • Fresh Juices • Tandoor Specials</p>
+      <a href="#payment" class="btn">Order Now</a>
+    </div>
+  </section>
+
+  <main class="container">
+    <section id="tiffins" class="menu-section">
+      <h3>Tiffins</h3>
+      <ul class="menu-list">
+        <li><span>Idli</span> <span class="price">₹30</span></li>
+        <li><span>Dosa</span> <span class="price">₹50</span></li>
+        <li><span>Poori</span> <span class="price">₹40</span></li>
+        <li><span>Upma</span> <span class="price">₹35</span></li>
+      </ul>
+    </section>
+
+    <section id="lunch" class="menu-section">
+      <h3>Lunch</h3>
+      <ul class="menu-list">
+        <li><span>Regular Thali</span> <span class="price">₹80</span></li>
+        <li><span>Special Thali</span> <span class="price">₹100</span></li>
+        <li><span>Curd Rice + Pickle</span> <span class="price">₹40</span></li>
+      </ul>
+    </section>
+
+    <section id="dinner" class="menu-section">
+      <h3>Dinner</h3>
+      <ul class="menu-list">
+        <li><span>Chapati + Curry</span> <span class="price">₹60</span></li>
+        <li><span>Meals</span> <span class="price">₹90</span></li>
+        <li><span>Biryani</span> <span class="price">₹110</span></li>
+      </ul>
+    </section>
+
+    <section id="juice" class="menu-section">
+      <h3>Juice</h3>
+      <ul class="menu-list">
+        <li><span>Orange Juice</span> <span class="price">₹40</span></li>
+        <li><span>Mosambi</span> <span class="price">₹40</span></li>
+        <li><span>Mixed Fruit</span> <span class="price">₹60</span></li>
+        <li><span>Lassi</span> <span class="price">₹50</span></li>
+      </ul>
+    </section>
+
+    <section id="tandoor" class="menu-section">
+      <h3>Tandoor</h3>
+      <ul class="menu-list">
+        <li><span>Butter Naan</span> <span class="price">₹35</span></li>
+        <li><span>Roti</span> <span class="price">₹25</span></li>
+        <li><span>Paneer Tikka</span> <span class="price">₹120</span></li>
+        <li><span>Chicken Tikka</span> <span class="price">₹140</span></li>
+      </ul>
+    </section>
+
+    <section id="payment" class="menu-section">
+      <h3>Order & Pay</h3>
+      <form id="orderForm">
+        <label>
+          Name
+          <input type="text" name="name" required />
+        </label>
+
+        <label>
+          Room / Block
+          <input type="text" name="room" required />
+        </label>
+
+        <label>
+          Phone
+          <input type="tel" name="phone" required />
+        </label>
+
+        <fieldset>
+          <legend>Select Items</legend>
+          <div class="checkbox-group">
+            <label><input type="checkbox" name="items" value="Idli" data-price="30"> Idli (₹30)</label>
+            <label><input type="checkbox" name="items" value="Dosa" data-price="50"> Dosa (₹50)</label>
+            <label><input type="checkbox" name="items" value="Regular Thali" data-price="80"> Regular Thali (₹80)</label>
+            <label><input type="checkbox" name="items" value="Special Thali" data-price="100"> Special Thali (₹100)</label>
+            <label><input type="checkbox" name="items" value="Biryani" data-price="110"> Biryani (₹110)</label>
+            <label><input type="checkbox" name="items" value="Orange Juice" data-price="40"> Orange Juice (₹40)</label>
+            <label><input type="checkbox" name="items" value="Butter Naan" data-price="35"> Butter Naan (₹35)</label>
+            <label><input type="checkbox" name="items" value="Paneer Tikka" data-price="120"> Paneer Tikka (₹120)</label>
+          </div>
+        </fieldset>
+
+        <div class="total">
+          Total: ₹<span id="totalAmount">0</span>
+        </div>
+
+        <label>
+          Payment Mode
+          <select name="paymentMode" required>
+            <option value="">Select</option>
+            <option value="UPI">UPI (GPay/PhonePe/Paytm)</option>
+            <option value="Card">Card</option>
+            <option value="Cash">Cash on Delivery</option>
+          </select>
+        </label>
+
+        <button type="submit" class="btn">Place Order</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>Vishnu Campus Cuisine – Vishnu Campus, Chennai</p>
+      <p>Timings: 7:00 AM – 10:00 PM</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+  </html>
